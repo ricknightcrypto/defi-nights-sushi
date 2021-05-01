@@ -312,7 +312,7 @@ export default function Swap() {
     return (
         <>
             <Helmet>
-                <title>Swap | Sushi</title>
+                <title>Swap | </title>
                 <meta
                     name="description"
                     content="Sushi allows for swapping of ERC20 compatible tokens across multiple networks"
@@ -324,7 +324,7 @@ export default function Swap() {
                 onConfirm={handleConfirmTokenWarning}
             />
             <SwapPoolTabs active={'swap'} />
-            <div className="bg-dark-900 shadow-swap-blue-glow w-full max-w-xl rounded">
+            <div className="bg-dark-900 w-full max-w-xl rounded">
                 <SwapHeader />
                 <Wrapper id="swap-page">
                     <ConfirmSwapModal

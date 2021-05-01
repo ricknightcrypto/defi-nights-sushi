@@ -6,6 +6,7 @@ import Polling from '../components/Header/Polling'
 import Popups from '../components/Popups'
 import Web3ReactManager from '../components/Web3ReactManager'
 import PublicRoute from '../hocs/PublicRoute'
+
 // Feat Kashi
 import WalletRoute from '../hocs/WalletRoute'
 import { useActiveWeb3React } from '../hooks/index'
@@ -22,6 +23,7 @@ import {
     RedirectOldAddLiquidityPathStructure,
     RedirectToAddLiquidity
 } from './AddLiquidity/redirects'
+
 //Feat Bento
 import Bento from './BentoBox'
 import BentoBalances from './BentoBox/Balances'
@@ -52,12 +54,14 @@ function App(): JSX.Element {
 
     const { pathname, search } = useLocation()
 
+    // Todo: Replace this
     useEffect(() => {
         if (bodyRef.current) {
             bodyRef.current.scrollTo(0, 0)
         }
     }, [pathname])
 
+    // Todo: replace this
     useEffect(() => {
         ReactGA.pageview(`${pathname}${search}`)
     }, [pathname, search])

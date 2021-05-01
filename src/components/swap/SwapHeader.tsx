@@ -15,7 +15,7 @@ export default function SwapHeader(): JSX.Element {
             <div className="grid grid-cols-2 rounded-md p-3px md:bg-dark-800">
                 <NavLink
                     className="flex items-center justify-center px-4 md:px-10 rounded-md text-center text-secondary hover:text-high-emphesis text-base font-medium"
-                    activeClassName="text-high-emphesis font-bold md:bg-dark-900 md:border-gradient"
+                     activeClassName="text-high-emphesis font-bold md:bg-dark-900 md:border-gradient"
                     to="/swap"
                 >
                     Swap

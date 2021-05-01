@@ -142,9 +142,6 @@ export default function CurrencyInputPanel({
     id,
     showCommonBases,
     customBalanceText,
-    cornerRadiusBottomNone,
-    cornerRadiusTopNone,
-    containerBackground
 }: CurrencyInputPanelProps) {
     const { t } = useTranslation()
 
@@ -161,37 +158,9 @@ export default function CurrencyInputPanel({
         <div id={id} className="rounded bg-dark-800 p-5">
             <div
                 className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row justify-between"
-                // hideInput={hideInput}
-                // cornerRadiusBottomNone={cornerRadiusBottomNone}
-                // cornerRadiusTopNone={cornerRadiusTopNone}
-                // containerBackground={containerBackground}
             >
-                {/* {!hideInput && (
-                    <LabelRow>
-                        <RowBetween>
-                            <TYPE.body color={theme.text3} fontWeight={500} fontSize={14}>
-                                {label}
-                            </TYPE.body>
-                            {account && (
-                                <TYPE.body
-                                    onClick={onMax}
-                                    color={theme.text3}
-                                    fontWeight={500}
-                                    fontSize={14}
-                                    style={{ display: 'inline', cursor: 'pointer' }}
-                                >
-                                    {!hideBalance && !!currency && selectedCurrencyBalance
-                                        ? (customBalanceText ?? 'Balance: ') + selectedCurrencyBalance?.toSignificant(6)
-                                        : ' -'}
-                                </TYPE.body>
-                            )}
-                        </RowBetween>
-                    </LabelRow>
-                )} */}
                 <div
                     className="w-full sm:w-2/5"
-                    // style={hideInput ? { padding: '0', borderRadius: '8px' } : {}}
-                    // selected={disableCurrencySelect}
                 >
                     <CurrencySelect
                         selected={!!currency}
@@ -233,10 +202,6 @@ export default function CurrencyInputPanel({
                                         </div>
                                     )}
                                     <div className="flex items-center">
-                                        {/* <StyledTokenName
-                                            className="token-symbol-container"
-                                            active={Boolean(currency && currency.symbol)}
-                                        > */}
                                         <div className="text-lg md:text-2xl font-bold">
                                             {(currency && currency.symbol && currency.symbol.length > 20
                                                 ? currency.symbol.slice(0, 4) +
